@@ -1,0 +1,125 @@
+--------------------
+    Credits
+--------------------
+1. David Kidd(Center for Population Biology, Silwood Park Campus, Imperial College London UK)
+2. Xianhua Liu (National Evolutionary Synthesis Center, Durham. NC, USA)
+
+Citation: Kidd,  D.  M.,  and  X.  Liu.  2008.  GEOPHYLOBUILDER  1.0:  an  ArcGIS  extension  for  creating  'geophylogenies'.  Molecular  Ecology  Resources  8:88-91.  
+
+--------------------
+    License
+--------------------
+   Copyright (C) 2009, David Kidd, d.kidd@imperial.ac.uk. 
+   Copyright (C) 2009, Xianhua Liu, xl24@duke.edu. 
+   Copyright (C) 2009, National Evolutionary Synthesis Center (NESCent).
+ 
+  This library is free software; you can redistribute it and/or
+  modify it under the terms of the GNU Lesser General Public License
+  as published by the Free Software Foundation; either version 2.1
+  of the License, or (at your option) any later version.
+
+  This library is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  Lesser General Public License for more details.
+
+  You should have received a copy of the GNU Lesser General Public
+  License along with this library; if not, write to the Free
+  Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA
+  02111-1307 USA
+
+--------------------------------------------------
+     Open Project in MS Visual Studio
+--------------------------------------------------
+1. make sure you have installed MS Visual Studio
+2. browse to root folder
+3. double click GeoPhyloBuilder_1-0.sln
+
+See 'Required Components' below for installation of required components
+
+------------------------------
+     Required Components
+------------------------------
+1. Microsoft .NET Framework 2.0
+2. Framework .NET 1.1
+3. ArcGIS ArcObjects.NET API
+4. Add the ArcObjects.NET API feature to ArcGIS.
+
+See 'Installation Problems' #3 for installation instruction of all above components. 
+    
+--------------------------------
+     Installation Problems
+--------------------------------     
+1.  Error 2869 when installing on Microsoft Vista
+	When you install GeoPhyloBuilderon Windows Vista, you receive an error message: "The installer has encountered an unexpected error installing this package. This may indicate a problem with this package. The error code is 2869"
+This happens because of User Access Control (UAC) feature of Windows Vista. UAC is incompatible with some features used with windows installation packages (.msi files).
+I have not tested out these possible solutions yet as I do not have access to Vista at the moment. Please email me and tell me if you try it and it works.
+
+    * Solution 1 
+   1). Disable UAC. You can do this in various ways, either with MSCONFIG, using Regedit, using Group Policy or using the Control Panel.
+   2). Start a command prompt and change to the directory containing the GeoPhyloBuilder setup file. Then run "msiexec /i GeoPhyloBuilder.msi".
+   3). Create a batch file (e.g. intravnews.bat) containing the line "GeoPhyloBuilder.msi". Place this batch file in the same folder as the GeoPhyloBuilder.msi file. Now start a command prompt with Administrative privileges: Start, Run, CMD, then press CTRL+SHIFT+ENTER. Now type "GeoPhyloBuilder.bat" and press Enter. 
+
+    * Solution 2. Temporarily turning off the User Account Control (UAC) will allow you to install successfully. 
+   1). Go to Start and choose Control Panel.
+   2). Select User Account and Family settings and choose "Add or Remove User Account".
+   3). Select on one of the user accounts, you can use yours or the guest account.
+   4). Under the user account click "Go to the main User Account page" link.
+   5). Under "Make changes to your user account" click "Change security settings".
+   6). In the "Turn on User Account Control (UAC) to make your computer more secure", click to unselect "Use User Account Control (UAC) to help protect your computer". Choose Ok.
+   7). You will be prompted to reboot your computer. Do so when ready. 
+
+If you have trouble finding the User Account Control selection, the Control Panel has a search option towards the top right side. Search for "UAC" and the option for “Turn User Account Control (UAC) on or off" will display. Don't forget to re-enable UAC after install for security reasons. In order to re-enable UAC just select the above checkbox and reboot.
+
+2. Error: 99 External component has thrown an exception when pressing Open button for the Spatial Class
+
+    * This is a bug of ArcGIS. The workaround is to rename the fmearcgisext.dll file.
+    * Find the fmearcgisext.dll file. The default location of the file is: C:\Program Files\ArcGIS\Data Interoperability Extension. If the file is not located there, you will have to find it.
+    * Rename the file fmearcgisext.dll to OLDfmearcgisext.dll. Do Not Delete It!
+    * Restart GeoPhyloBuilder and it should work. 
+
+3. Error message: unable to get installer types in the geophylobuilder_1-0.exe assembly. unable to load one or more of the requested types. retrieve the loaderExceptions property for more informations
+
+	1). Verify that Microsoft .NET Framework 2.0 is installed.
+
+    * Click the “Start” button and select “Control Panel.”
+    * Double-click on “Add or Remove Programs.”
+    * If “Microsoft .NET Framework 2.0” is already installed on your computer, skip to step 3 below.
+    * If you do not see “Microsoft .NET Framework 2.0” in the list of programs, proceed to step 2 below. 
+
+	2). Go to the Microsoft web site.
+
+    * Browse to the downloads page, and download “Microsoft .NET Framework Version 2.0 Redistributable Package (x86).”
+    * Install .NET 2.0 on your machine.
+    * Proceed to step 3 below. 
+
+	3). Verify that Microsoft Framework .NET 1.1 is installed.
+
+    * Open the Control Panel.
+    * Double-click on “Add or Remove Programs.”
+    * If “Microsoft .NET Framework 1.1” is already installed on your computer, skip to step 5 below.
+    * If you do not see “Microsoft .NET Framework 1.1” in the list of programs, proceed to step 4 below. 
+
+	4). Go to the Microsoft web site.
+
+    * Browse to the downloads page, and download “Microsoft .NET Framework Version 1.1 Redistributable Package.”
+    * Install .NET 1.1 on your machine. 
+
+	5). Check to see if ArcGIS ArcObjects.NET API is installed.
+
+    * Open the Control Panel.
+    * Open the Add/Remove Programs Admin.
+    * Select the "ArcGIS Desktop" program entry. Click "Change."
+    * Locate the ArcGIS Desktop setup disc (this may not be necessary if the disk is already in the CD drive or if you installed from a network location).
+    * Select the "Modify" option in the application maintenance screen. Click "Next."
+    * In the "Features to install" tree, look under the "Application" node. There should be a sub-node labeled: ".NET Support". If there IS a red X icon next to it, then the ArcObjects.NET API has not been installed. In this case, go to step 6. If there IS NOT a red X, then the ArcObjects.NET API has already been installed. 
+
+	6). Add the ArcObjects.NET API feature to ArcGIS.
+
+    * Click the drop-down icon next to the ".NET Support" feature. Select the "Will be installed on the local hard drive" option.
+    * Click "Next."
+    * Click "Next" on the "Ready to Modify Application" page.
+    * Click "Finish" on the "Successfully installed" page.     
+
+
+
