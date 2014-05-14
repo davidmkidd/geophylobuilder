@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GeoPhyloBuilder_1-1-1", "GeoPhyloBuilder_1-0\GeoPhyloBuilder_1-1-1.vbproj", "{45B9C22D-824A-490F-8FD7-F1C353038A96}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "GeoPhyloBuilder", "GeoPhyloBuilder\GeoPhyloBuilder.vdproj", "{2D0FE5CD-3549-434B-887A-8D2FBB1E75A6}"

@@ -2,7 +2,7 @@
 '
 '   GeoPhyloBuilder
 '
-'   Copyright (C) 2007, David Kidd, dk@nescent.org. 
+'   Copyright (C) 2007-2013, David Kidd, david.kidd@kingston.ac.uk 
 '   Copyright (C) 2007, Xianhua Liu, xl24@duke.edu. 
 '   Copyright (C) 2007, National Evolutionary Synthesis Center (NESCent).
 ' 
@@ -30,7 +30,7 @@ Imports ESRI.ArcGIS.Catalog
 Imports ESRI.ArcGIS.esriSystem
 Imports ESRI.ArcGIS.DataSourcesFile
 Imports ESRI.ArcGIS.DataSourcesGDB
-Imports NexusNet.Nexus
+'Imports NexusNet.Nexus
 
 Imports system.io
 
@@ -266,27 +266,33 @@ Public Class DlgMain
         On Error GoTo Error_Handler
 
         Dim pGxDialog As IGxDialog
-        Dim pGDBFilter As IGxObjectFilter
-        Dim pFilterCol As IGxObjectFilterCollection
+        Dim pGxObjFilter As IGxObjectFilter
         Dim pEnumGxObj As IEnumGxObject
-        Dim pGXObject As IGxObject
-
-        pGDBFilter = New GxFilterFeatureClasses
+        Dim pGxObject As IGxObject
         pGxDialog = New GxDialog
-        pFilterCol = pGxDialog
+        pGxObjFilter = New GxFilterFeatureClasses
 
-        pFilterCol.AddFilter(pGDBFilter, True)
+        'Dim pFilterCol As IGxObjectFilterCollection
 
-        pGxDialog.Title = "Select Location Data"
+
+        'pGDBFilter = New GxFilterFeatureClasses
+
+
+        'pFilterCol = pGxDialog
+
+        'pFilterCol.AddFilter(pGDBFilter, True)
+
+        pGxDialog.ObjectFilter = pGxObjFilter
+        pGxDialog.Title = "Select Location Feature Class"
         pGxDialog.AllowMultiSelect = False
 
         pEnumGxObj = New GxObjectArray()
 
-        Dim aoInitialize As IAoInitialize
-        aoInitialize = New AoInitializeClass()
-        If (aoInitialize.IsProductCodeAvailable(esriLicenseProductCode.esriLicenseProductCodeArcInfo) = esriLicenseStatus.esriLicenseAvailable) Then
-            aoInitialize.Initialize(esriLicenseProductCode.esriLicenseProductCodeArcInfo)
-        End If
+        'Dim aoInitialize As IAoInitialize
+        'aoInitialize = New AoInitializeClass()
+        'If (aoInitialize.IsProductCodeAvailable(esriLicenseProductCode.esriLicenseProductCodeArcInfo) = esriLicenseStatus.esriLicenseAvailable) Then
+        'aoInitialize.Initialize(esriLicenseProductCode.esriLicenseProductCodeArcInfo)
+        'End If
 
 
         pGxDialog.DoModalOpen(0, pEnumGxObj)
@@ -362,7 +368,7 @@ Public Class DlgMain
 Exit_Here:
         Exit Sub
 Error_Handler:
-        MsgBox("Error: " & Err.Number & Err.Description)
+        MsgBox("Error: " & Err.Number & " - " & Err.Description)
         Resume Exit_Here
     End Sub
 
@@ -389,11 +395,11 @@ Error_Handler:
 
         pGxDialog.Title = "Select Link File..."
         pGxDialog.AllowMultiSelect = False
-        Dim aoInitialize As IAoInitialize
-        aoInitialize = New AoInitializeClass()
-        If (aoInitialize.IsProductCodeAvailable(esriLicenseProductCode.esriLicenseProductCodeArcInfo) = esriLicenseStatus.esriLicenseAvailable) Then
-            aoInitialize.Initialize(esriLicenseProductCode.esriLicenseProductCodeArcInfo)
-        End If
+        'Dim aoInitialize As IAoInitialize
+        'aoInitialize = New AoInitializeClass()
+        'If (aoInitialize.IsProductCodeAvailable(esriLicenseProductCode.esriLicenseProductCodeArcInfo) = esriLicenseStatus.esriLicenseAvailable) Then
+        'aoInitialize.Initialize(esriLicenseProductCode.esriLicenseProductCodeArcInfo)
+        'End If
         pGxDialog.DoModalOpen(0, pEnumGxObj)
 
         pGXObject = pEnumGxObj.Next
@@ -545,11 +551,11 @@ Error_Handler:
 
             pGxDialog.AllowMultiSelect = False
 
-            Dim aoInitialize As IAoInitialize
-            aoInitialize = New AoInitializeClass()
-            If (aoInitialize.IsProductCodeAvailable(esriLicenseProductCode.esriLicenseProductCodeArcInfo) = esriLicenseStatus.esriLicenseAvailable) Then
-                aoInitialize.Initialize(esriLicenseProductCode.esriLicenseProductCodeArcInfo)
-            End If
+            'Dim aoInitialize As IAoInitialize
+            ' aoInitialize = New AoInitializeClass()
+            'If (aoInitialize.IsProductCodeAvailable(esriLicenseProductCode.esriLicenseProductCodeArcInfo) = esriLicenseStatus.esriLicenseAvailable) Then
+            'AoInitialize.Initialize(esriLicenseProductCode.esriLicenseProductCodeArcInfo)
+            'End If
 
             pGxDialog.DoModalOpen(0, pEnumGxObj)
 

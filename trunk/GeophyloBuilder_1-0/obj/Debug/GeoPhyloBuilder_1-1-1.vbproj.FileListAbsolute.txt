@@ -11,3 +11,17 @@ C:\Document Files\GeoPhyloBuilder1_21\trunk\GeoPhyloBuilder_1-0\bin\Debug\Intero
 C:\Document Files\GeoPhyloBuilder1_21\trunk\GeoPhyloBuilder_1-0\obj\Debug\GeoPhyloBuilder_1-1.exe
 C:\Document Files\GeoPhyloBuilder1_21\trunk\GeoPhyloBuilder_1-0\obj\Debug\GeoPhyloBuilder_1-1.xml
 C:\Document Files\GeoPhyloBuilder1_21\trunk\GeoPhyloBuilder_1-0\obj\Debug\GeoPhyloBuilder_1-1.pdb
+C:\Users\dkidd\Documents\GitHub\geophylobuilder\trunk\GeoPhyloBuilder_1-0\obj\Debug\Interop.Scripting.dll
+C:\Users\dkidd\Documents\GitHub\geophylobuilder\trunk\GeoPhyloBuilder_1-0\obj\Debug\GeoPhyloBuilder_1-1-1.vbproj.ResolveComReference.cache
+C:\Users\dkidd\Documents\GitHub\geophylobuilder\trunk\GeoPhyloBuilder_1-0\obj\Debug\GeoPhyloBuilder_1-1.exe
+C:\Users\dkidd\Documents\GitHub\geophylobuilder\trunk\GeoPhyloBuilder_1-0\obj\Debug\GeoPhyloBuilder_1-1.xml
+C:\Users\dkidd\Documents\GitHub\geophylobuilder\trunk\GeoPhyloBuilder_1-0\obj\Debug\GeoPhyloBuilder_1-1.pdb
+C:\Users\dkidd\Documents\GitHub\geophylobuilder\trunk\GeoPhyloBuilder_1-0\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\dkidd\Documents\GitHub\geophylobuilder\trunk\GeoPhyloBuilder_1-0\obj\Debug\GeoPhyloBuilder_1_1.Resources.resources
+C:\Users\dkidd\Documents\GitHub\geophylobuilder\trunk\GeoPhyloBuilder_1-0\obj\Debug\GeoPhyloBuilder_1_1.DlgMain.resources
+C:\Users\dkidd\Documents\GitHub\geophylobuilder\trunk\GeoPhyloBuilder_1-0\obj\Debug\ResGen.read.1.tlog
+C:\Users\dkidd\Documents\GitHub\geophylobuilder\trunk\GeoPhyloBuilder_1-0\obj\Debug\ResGen.write.1.tlog
+C:\Users\dkidd\Documents\GitHub\geophylobuilder\trunk\GeoPhyloBuilder_1-0\bin\Debug\GeoPhyloBuilder_1-1.exe
+C:\Users\dkidd\Documents\GitHub\geophylobuilder\trunk\GeoPhyloBuilder_1-0\bin\Debug\GeoPhyloBuilder_1-1.pdb
+C:\Users\dkidd\Documents\GitHub\geophylobuilder\trunk\GeoPhyloBuilder_1-0\bin\Debug\GeoPhyloBuilder_1-1.xml
+C:\Users\dkidd\Documents\GitHub\geophylobuilder\trunk\GeoPhyloBuilder_1-0\bin\Debug\Interop.Scripting.dll
